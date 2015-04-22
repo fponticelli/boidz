@@ -1,6 +1,6 @@
 package boidz.util;
 
-using thx.core.Floats;
+using thx.Floats;
 import thx.unit.angle.Degree;
 import boidz.Point;
 

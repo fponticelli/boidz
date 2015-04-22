@@ -3,7 +3,7 @@ package boidz.render.canvas;
 import boidz.Flock;
 import boidz.IRenderable;
 import boidz.Point;
-import thx.core.Ints;
+import thx.Ints;
 import thx.color.RGB;
 import thx.color.RGBA;
 
