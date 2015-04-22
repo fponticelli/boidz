@@ -4,7 +4,7 @@ import thx.unit.angle.Degree;
 import boidz.IFlockRule;
 using boidz.util.Steer;
 
-using thx.core.Floats;
+using thx.Floats;
 
 class RespectBoundaries implements IFlockRule {
   public var minx : Float;

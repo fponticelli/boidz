@@ -3,11 +3,11 @@ import boidz.Display;
 import boidz.Flock;
 import boidz.rules.*;
 import boidz.render.canvas.*;
-using thx.core.Arrays;
-using thx.core.Floats;
+using thx.Arrays;
+using thx.Floats;
 
 import js.Browser;
-import thx.core.Timer;
+import thx.Timer;
 
 class Canvas {
   static var width  = 800;
@@ -46,7 +46,7 @@ class Canvas {
         rendering = null,
         frameRate = null,
         start = Timer.time();
-    thx.core.Timer.frame(function(delta) {
+    thx.Timer.frame(function(delta) {
       delta += residue;
       while(delta - step >= 0) {
 
@@ -69,7 +69,7 @@ class Canvas {
       start = n;
     });
 
-    thx.core.Timer.repeat(function() {
+    thx.Timer.repeat(function() {
       var average = benchmarks.average().roundTo(2),
           min     = benchmarks.min().roundTo(2),
           max     = benchmarks.max().roundTo(2);
