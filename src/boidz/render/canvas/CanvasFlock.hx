@@ -4,8 +4,8 @@ import boidz.Flock;
 import boidz.IRenderable;
 import boidz.Point;
 import thx.Ints;
-import thx.color.RGB;
-import thx.color.RGBA;
+import thx.color.Rgb;
+import thx.color.Rgba;
 
 class CanvasFlock implements IRenderable<CanvasRender> {
   var flock : Flock;
@@ -18,10 +18,10 @@ class CanvasFlock implements IRenderable<CanvasRender> {
   var trailColor : String;
 
   var map : Map<Boid, Array<Point>>;
-  public function new(flock : Flock, ?boidColor : RGBA, ?crownColor : RGBA, ?trailColor : RGBA) {
+  public function new(flock : Flock, ?boidColor : Rgba, ?crownColor : Rgba, ?trailColor : Rgba) {
     this.boidColor = null == boidColor ? "#000000" : boidColor;
     this.crownColor = null == crownColor ? "rgba(255,255,255,100)" : crownColor;
-    this.trailColor = null == trailColor ? (this.boidColor : RGB).withAlpha(20) : trailColor;
+    this.trailColor = null == trailColor ? (this.boidColor : Rgb).withAlpha(20) : trailColor;
 
     this.flock = flock;
     this.map = new Map();
